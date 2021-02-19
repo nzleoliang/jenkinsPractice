@@ -2,13 +2,13 @@
 version: '3.7'
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    image: nzleoliang/jenkinswithdocker:latest
     privileged: true
     user: root
     ports:
-      - 8083:8080
-      - 50003:50000
-    container_name: my-jenkins-3
+      - 8080:8080
+      - 50000:50000
+    container_name: my-jenkins
     volumes:
       - ~/jenkins_data:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
